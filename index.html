@@ -327,6 +327,91 @@
     transform: scale(1.3);
     z-index: 10;
 }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+}
+
+.skill-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.skill-item span {
+  font-weight: bold;
+  color: #0d47a1;
+  text-align: center;
+}
+.veille-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.veille-card {
+  background-color: #ffffff;
+  border-left: 5px solid #4CAF50;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.veille-card:hover {
+  transform: translateY(-5px);
+}
+
+.veille-card h3 {
+  margin-top: 0;
+  font-size: 1.3em;
+  color: #333;
+}
+
+.veille-card p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5em;
+}
+
+.veille-card a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.veille-card a:hover {
+  text-decoration: underline;
+}
+
+.veille-date {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #888;
+}
+
 
 
     </style>
@@ -342,6 +427,7 @@
         <a href="#certifications">Certifications</a>
         <a href="#projets">Projets</a>
         <a href="#veille">Veille</a>
+        <a href="docs/Dekens Léo Tableau de synthese - Tableau de synthèse Épreuve E4 (1).pdf" target="_blank">Tableau de synthèse</a>
         <a href="#contact">Contact</a>
         <a href="#mentions-legales" style="background-color: #f1f1f1; color: #0d47a1; border-radius: 5px; padding: 10px; margin-left: 10px; font-weight: bold;">Mentions légales</a>
 
@@ -354,8 +440,38 @@
         </section>
         <section id="competences">
             <h2>Compétences</h2>
-            <p>Linux, Windows Server, Virtualisation, Sécurité, Cloud, Déploiement via MDT, Helpdesk via GLPI, Gestion de parc informatique.</p>
-        </section>
+          
+            <!-- Systèmes d’exploitation -->
+            <h3>Systèmes d’exploitation</h3>
+            <div class="skills-grid">
+              <div class="skill-item"><img src="logo/linux.jpeg" alt="Linux"><span>Linux</span></div>
+              <div class="skill-item"><img src="img/windows.png" alt="Windows"><span>Windows</span></div>
+              <div class="skill-item"><img src="logo/ws.png" alt="Windows Server"><span>Windows Server</span></div>
+            </div>
+          
+            <!-- Virtualisation & Conteneurs -->
+            <h3>Virtualisation & Conteneurs</h3>
+            <div class="skills-grid">
+              <div class="skill-item"><img src="logo/vmware.png" alt="VMware"><span>VMware / VirtualBox</span></div>
+              <div class="skill-item"><img src="logo/docker.png" alt="Docker"><span>Docker</span></div>
+            </div>
+          
+            <!-- Sécurité réseau -->
+            <h3>Sécurité réseau</h3>
+            <div class="skills-grid">
+              <div class="skill-item"><img src="logo/pfsense.png" alt="pfSense"><span>pfSense</span></div>
+              <div class="skill-item"><img src="logo/STORMSHIELD.webp" alt="Stormshield"><span>Stormshield</span></div>
+            </div>
+          
+            <!-- Déploiement & Support -->
+            <h3>Déploiement & Support</h3>
+            <div class="skills-grid">
+              <div class="skill-item"><img src="logo/mdt.png" alt="MDT"><span>MDT</span></div>
+              <div class="skill-item"><img src="logo/glpi.jpg" alt="GLPI"><span>GLPI</span></div>
+            </div>
+          
+           
+          
         <section id="parcours">
             <h2 class="parcours-title">
                 Parcours
@@ -496,6 +612,7 @@
                             </div>
                         </div>
                     </div>
+                     
             
                     <!-- Nouvelle Certification 3 -->
                     <div class="cert-card">
@@ -512,6 +629,8 @@
                     </div>
                 </div>
             </section>
+            
+             
             <!-- Nouvelle section Projets -->
 <section id="projets">
     <h2 class="text-center">Projets</h2>
@@ -632,7 +751,7 @@
                                         <img src="img1/stage1-9.png" class="d-block w-100" alt="Image 10 du stage 1">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="img1/stage1-10.png" class="d-block w-100" alt="Image 11 du stage 1">
+                                        <img src="img1/stage1-10.jpg" class="d-block w-100" alt="Image 11 du stage 1">
                                     </div>
                                     <div class="carousel-item">
                                         <img src="img1/stage1-11.png" class="d-block w-100" alt="Image 12 du stage 1">
@@ -861,7 +980,81 @@
         <div style="text-align: center;">
             <img src="img/feedly.png" alt="Capture Feedly" class="feedly-img" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin-top: 20px;">
         
-          
+            <div class="veille-container">
+                <h2>📌 Exemple d'article de veille</h2>
+                <!-- Article 1 -->
+                <div class="veille-card">
+                  <h3>✅ Résumé de l’article ZATAZ – Oracle Cloud visé par une attaque revendiquée (25 mars 2025)</h3>
+                  
+                  <p>
+                    Un pirate appelé rose87168 dit avoir piraté Oracle Cloud et volé 6 millions de données sensibles (mots de passe, fichiers de sécurité). Il a publié des preuves sur le dark web et demande une rançon de 14 millions d’euros. Oracle dit qu’il n’y a pas eu de piratage. Plus de 3 000 entreprises pourraient être concernées, mais aucune alerte officielle n’a encore été publiée.
+                  </p>
+                  
+                  <p><strong>🔗 Lien vers l’article :</strong>  
+                    <a href="https://www.zataz.com/oracle-cloud-vise-par-une-attaque-revendiquee/" target="_blank">
+                      https://www.zataz.com/oracle-cloud-vise-par-une-attaque-revendiquee/
+                    </a>
+                  </p>
+              
+                  <p><strong>🗣️ Mon avis :</strong><br>
+                    Même si Oracle dit qu’il n’y a pas eu de piratage, le pirate montre des preuves qui font douter.  
+                    Ça pose problème : si c’est vrai, c’est grave pour la sécurité d’Oracle Cloud.  
+                    Et si ce n’est pas vrai, Oracle devrait mieux communiquer pour rassurer.
+                    <br><br>
+                    Dans tous les cas, ça montre que les entreprises doivent protéger leurs systèmes cloud  
+                    et bien préparer leur communication en cas d’incident. La confiance des clients est vite en jeu.
+                  </p>
+              
+                  <span class="veille-date">Publié en avril 2025</span>
+                </div>
+              </div>
+              
+            
+              <div class="veille-card">
+                <h3>✅ Résumé de l’article IT Pro – Le rôle de l'intelligence artificielle dans le Cloud Computing</h3>
+                <p>
+                  Cet article explique comment l’intelligence artificielle (IA) améliore le cloud computing. Grâce à l’IA, les entreprises peuvent automatiser certaines tâches, mieux analyser leurs données, et renforcer leur cybersécurité. Cette combinaison rend les services cloud plus performants, plus intelligents, et plus sûrs.
+                </p>
+                <p><strong>🔗 Lien vers l’article :</strong><br>
+                <a href="https://www.itpro.fr/le-role-de-lintelligence-artificielle-dans-le-cloud-computing/" target="_blank">
+                  https://www.itpro.fr/le-role-de-lintelligence-artificielle-dans-le-cloud-computing/
+                </a>
+                </p>
+                <p>
+                  <strong>🗣️ Mon avis :</strong><br>
+                  L’intégration de l’IA dans le cloud est une vraie révolution. Elle aide les entreprises à être plus efficaces et à innover. Mais il faut faire attention à bien gérer les données et à respecter la vie privée.
+                </p>
+                <p>
+                  
+                </p>
+                <span class="veille-date">Publié en décembre 2024</span>
+              </div>
+            </div>
+            
+            <div class="veille-container">
+                
+              
+                <!-- Article 5 -->
+                <div class="veille-card">
+                  <h3>✅ Résumé de l’article – Étude Enterprise Cloud Index : l'adoption rapide des applications d’IA</h3>
+                  <p>
+                    Nutanix a publié en février 2025 la septième édition de son enquête annuelle Enterprise Cloud Index (ECI), évaluant l'adoption du cloud par les entreprises. L'étude révèle que 98 % des répondants rencontrent des difficultés pour faire passer leurs charges de travail d’IA générative du développement à la production, l’un des principaux défis étant l’intégration avec l’infrastructure IT existante.
+                  </p>
+                  <p>
+                    <strong>Mon avis :</strong><br>
+                    Beaucoup d’entreprises veulent utiliser l’IA, mais leur système informatique n’est pas encore adapté. Il faut qu’elles améliorent leur cloud pour vraiment profiter de l’intelligence artificielle.
+                  </p>
+                  <p>
+                    <strong>Lien de l’article :</strong><br>
+                    <a href="https://www.nutanix.com/fr/press-releases/2025/etude-enterprise-cloud-index" target="_blank">
+                      https://www.nutanix.com/fr/press-releases/2025/etude-enterprise-cloud-index
+                    </a>
+                  </p>
+                  <span class="veille-date">Publié en février 2025</span>
+                </div>
+              </div>
+              
+            </section>
         </div>
         
     </main>
@@ -869,7 +1062,8 @@
     <footer>
         <p>© 2025 Ma Veille - Tous droits réservés</p>
     </footer>
-   
+    
+        
 
 </body>
 </html>
@@ -899,10 +1093,14 @@
     <p><strong>Éditeur :</strong> Léo Dekens</p>
     <p><strong>Adresse email :</strong> leodekens62@gmail.com</p>
     <p><strong>Responsable de la publication :</strong> Léo Dekens</p>
-    <p><strong>Hébergement :</strong> Le site est hébergé par l’étudiant lui-même dans le cadre d’un projet personnel.</p>
+    <p><strong>Hébergement :</strong> Ce site est hébergé par <a href="https://pages.github.com" target="_blank">GitHub Pages</a>,
+        un service proposé par GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. </p>
     <p><strong>Objet du site :</strong> Présentation du parcours professionnel, scolaire et des compétences de Léo Dekens dans le cadre de sa formation en BTS SIO option SISR.</p>
     <p><strong>Données personnelles :</strong> Aucune donnée personnelle n’est collectée via ce site.</p>
-    <p><strong>Crédits photos et contenus :</strong> Toutes les images et textes présents sur ce site sont la propriété de Léo Dekens, sauf mention contraire.</p>
+    <p><strong>Crédits photos et contenus :</strong> Crédits logos :
+        Les logos du CESI, de l’ANSSI, de la CNIL, des lycées Malraux, Branly, Alexandre Ribot et des Carrières du Boulonnais sont la propriété exclusive de leurs titulaires respectifs et sont utilisés à titre informatif, sans but commercial.</p>
+        Les logos représentant les compétences (Linux, Windows, pfSense, Docker, etc.) sont issus de ressources libres de droits ou capturés à des fins pédagogiques. Ils restent la propriété de leurs éditeurs respectifs.
+
 </section>
 
             </section>
